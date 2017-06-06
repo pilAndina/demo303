@@ -1,6 +1,27 @@
 import { NgModule, ErrorHandler } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
+import { CloudSettings, CloudModule } from '@ionic/cloud-angular';
+
+const cloudSettings: CloudSettings = {
+  'core': {
+    'app_id': '59c23b76'
+  },
+  push: {
+    sender_id: '564553849534',
+    pluginConfig: {
+      ios: {
+        badge: true,
+        sound: true
+      },
+      android: {
+        iconColor: '#343434',
+        forceShow: true
+      }
+    }
+  }
+};
+
 import { MyApp } from './app.component';
 
 import { AboutPage } from '../pages/about/about';
@@ -21,7 +42,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    CloudModule.forRoot(cloudSettings)
   ],
   bootstrap: [IonicApp],
   entryComponents: [

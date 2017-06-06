@@ -24,3 +24,23 @@ $ ionic cordova run ios
 
 Substitute ios for android if not on a Mac.
 
+
+X.Y.Z
+
+X = cambios robustos y que son compatibles de una version a otra
+Y = agregar nuevas caracterisctas
+Z = resolver errores o bugs
+
+1.0.0
+1.1.0
+1.2.0
+1.2.1
+1.2.2
+1.2.3
+1.3.0
+2.0.0
+2.1.0
+2.2.0
+2.2.1
+2.2.3
+2.2.4
